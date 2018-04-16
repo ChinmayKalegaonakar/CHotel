@@ -1,0 +1,25 @@
+<% include ../partials/header %>
+<div class="container">
+    <div class="row">
+        <h1 style="text-align: center">Book a room in <%= Hotel.name %></h1>
+        <div style="width: 30%; margin: 25px auto;">
+            <form action="/hotel/<%= Hotel._id %>/booking" method="POST">
+                <div class="form-group">
+                    <input class="form-control" type="date" name="fromdate" placeholder="from">
+                </div>
+                  <div class="form-group">
+                    <input class="form-control" type="date" name="todate" placeholder="to">
+                </div>
+                  <div class="form-group">
+                    <input class="form-control" type="text" name="room" placeholder="room no">
+                </div>
+                <div class="form-group">
+                    <button class="btn btn-lg btn-primary btn-block">Submit!</button>
+                </div>
+            </form>
+            <a href="/">Go Back</a>
+        </div>
+    </div>
+</div>
+<% include ../partials/footer %>
+

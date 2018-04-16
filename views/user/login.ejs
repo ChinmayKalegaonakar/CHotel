@@ -1,0 +1,14 @@
+<% include ../partials/header %>
+
+<div class="container text-center col-lg-4" >
+    <form class="form-signin" action="/login" method="POST">
+      <h1 class="h3 mb-3 font-weight-normal">Please Login</h1>
+      <label for="inputEmail" class="sr-only">Email address</label>
+      <input type="email" name="email" class="form-control" placeholder="Email" required autofocus>
+      <label for="inputPassword" class="sr-only">Password</label>
+      <input type="password" name="password" class="form-control" placeholder="Password" required>
+      <button class="btn btn-lg btn-primary btn-block" type="submit">Login</button>
+      
+    </form>
+</div>
+<% include ../partials/footer %>

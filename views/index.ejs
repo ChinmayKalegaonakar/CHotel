@@ -1,0 +1,31 @@
+<% include ./partials/header %>
+<main role="main" class="container">
+<section class="jumbotron text-center">
+        <div class="container">
+          <h1 class="jumbotron-heading">Hotel Booking site</h1>
+          <p class="lead text-muted">Book your dream hotel today!</p>
+        </div>
+      </section>
+      
+      <div class="album py-5 bg-light">
+        <div class="container">
+          <div class="row">
+            <% Hotels.forEach(function(hotel){ %>
+            <div class="col-md-4">
+              <div class="card mb-4 box-shadow">
+                <img class="card-img-top" src="<%= hotel.img %>" alt="Card image cap">
+                <div class="card-body">
+                  <p class="card-text"><%= hotel.name %></p>
+                  <p class="card-text align-right">rating <%= hotel.rating %>/5</p>
+                  <div class="d-flex justify-content-between align-items-center">
+                    <a href="/hotel/<%= hotel._id %>" class="button button-pull-left" >view hotel</a>
+                   
+                    <small class="text-muted"><%= hotel.price %> Rs a night</small>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <% }); %>
+            </div></div></div>
+</main>
+<% include ./partials/footer %>

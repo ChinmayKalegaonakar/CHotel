@@ -1,0 +1,32 @@
+<% include ../partials/header %>
+<div class="container">
+
+      
+      <h1 class="my-4"><%= hotel.name %>
+      <small class="pull-right"><%= hotel.address %></small>
+      </h1>
+      <!-- Portfolio Item Row -->
+      <div class="row">
+        <div class="col-md-8">
+          <img class="img-fluid" src="<%= hotel.img %>" alt="">
+        </div>
+
+        <div class="col-md-4">
+          <h3 class="my-3"><%= hotel.name %></h3>
+          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam viverra euismod odio, gravida pellentesque urna varius vitae. Sed dui lorem, adipiscing in adipiscing et, interdum nec metus. Mauris ultricies, justo eu convallis placerat, felis enim.</p>
+          <h3 class="my-3">Hotel facilities</h3>
+          <ul>
+            <li>Breakfast</li>
+            <li>Swimming pool</li>
+            <li>Spa</li>
+            <li>Gym</li>
+          </ul>
+        <ul class="list-group list-group-flush">
+          <li class="list-group-item">Price for a night <%= hotel.price %> RS /-</li>
+          <li class="list-group-item"><a href="/hotel/book/<%= hotel._id %>" > book now </a></li>
+        </ul>
+        </div>
+      </div>
+</div>
+
+<% include ../partials/footer %>
